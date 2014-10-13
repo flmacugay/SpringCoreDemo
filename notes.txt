@@ -1,0 +1,7 @@
+
+
+1. idref in spring is to pass the id of a bean to another bean. This id must be string. And there must a bean with that name. It ensures at deployment time that bean with that name exists otherwise it will throw error.
+2. spring bean scopes singleton and prototype applies only to the object's properties. Other objects within the class has their own scope. 
+3. aware interfaces are called before bean post processors
+4. Spring doesn't call destroy methods on prototype beans.
+5. lifecycle - instantiate, aware, beanpostprocessorBEFORE, initializingbean, initmethod, beanpostprocessorAFTER, ACTIVE, disposablebean, destroymethod﻿
