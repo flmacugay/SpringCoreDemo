@@ -9,10 +9,10 @@ public class Circle implements Shape {
 	private Point point;
 	private double radius;
 	
-	@Qualifier("pointE")
 	public Point getPoint() {
 		return point;
 	}
+	@Qualifier("pointE")
 	public void setPoint(Point point) {
 		this.point = point;
 	}

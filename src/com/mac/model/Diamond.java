@@ -1,5 +1,8 @@
 package com.mac.model;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.DisposableBean;
@@ -59,6 +62,16 @@ public class Diamond implements Shape, ApplicationContextAware, BeanNameAware, I
 	
 	public void cleanup() {
 		System.out.println("Destroy method of "+beanName);
+	}
+	
+	@PostConstruct
+	public void postConstruct() {
+		System.out.println("at diamond post construct");
+	}
+	
+	@PreDestroy
+	public void preDestroy() {
+		System.out.println("at diamond pre destroy");
 	}
 
 }
